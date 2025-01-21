@@ -10,7 +10,7 @@ wss.on('connection',(socket,request)=>{
 
     if(!url)
     {
-        return ;
+        return;
     }
 
     const queryParams = new URLSearchParams(url.split('?')[1])

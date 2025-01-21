@@ -19,5 +19,8 @@
     "dotenv": "^16.4.7",
     "jsonwebtoken": "^9.0.2",
     "ws": "^8.18.0"
+  },
+    "devDependencies": {
+    "@repo/backend-common":"workspace:*"
   }
 }
