@@ -1,8 +1,10 @@
 import { WebSocketServer } from "ws";
 import jwt, { JwtPayload } from 'jsonwebtoken'
-import dotenv from 'dotenv';
-dotenv.config()
+import dotenv from 'dotenv'
+dotenv.config({path:'../../.env'})
 const wss = new WebSocketServer({port:8080})
+console.log(process.env.JWT_SECRET);
+
 
 wss.on('connection',(socket,request)=>{
 

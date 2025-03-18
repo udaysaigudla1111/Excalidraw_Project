@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@types/node':
+        specifier: ^22.10.7
+        version: 22.10.7
       prettier:
         specifier: ^3.2.5
         version: 3.3.3
@@ -57,6 +60,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      '@types/dotenv':
+        specifier: ^8.2.3
+        version: 8.2.3
       '@types/express':
         specifier: ^5.0.0
         version: 5.0.0
@@ -79,9 +85,9 @@ importers:
         specifier: ^3.1.9
         version: 3.1.9
     devDependencies:
-      '@repo/backend-common':
+      '@repo/common':
         specifier: workspace:*
-        version: link:../../packages/backend-common
+        version: link:../../packages/common
       '@types/node':
         specifier: ^22.10.7
         version: 22.10.7
@@ -134,6 +140,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      '@types/dotenv':
+        specifier: ^8.2.3
+        version: 8.2.3
       '@types/jsonwebtoken':
         specifier: ^9.0.7
         version: 9.0.7
@@ -149,16 +158,12 @@ importers:
       ws:
         specifier: ^8.18.0
         version: 8.18.0
-    devDependencies:
-      '@repo/backend-common':
-        specifier: workspace:*
-        version: link:../../packages/backend-common
 
-  packages/backend-common:
+  packages/common:
     dependencies:
-      dotenv:
-        specifier: ^16.4.7
-        version: 16.4.7
+      zod:
+        specifier: ^3.24.1
+        version: 3.24.1
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
@@ -692,6 +697,10 @@ packages:
 
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
+
+  '@types/dotenv@8.2.3':
+    resolution: {integrity: sha512-g2FXjlDX/cYuc5CiQvyU/6kkbP1JtmGzh0obW50zD7OKeILVL0NSpPWLXVfqoAGQjom2/SLLx9zHq0KXvD6mbw==}
+    deprecated: This is a stub types definition. dotenv provides its own type definitions, so you do not need this installed.
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -2859,6 +2868,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
+  zod@3.24.1:
+    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
@@ -3216,6 +3228,10 @@ snapshots:
   '@types/connect@3.4.38':
     dependencies:
       '@types/node': 20.17.6
+
+  '@types/dotenv@8.2.3':
+    dependencies:
+      dotenv: 16.4.7
 
   '@types/estree@1.0.6': {}
 
@@ -5765,3 +5781,5 @@ snapshots:
   yn@3.1.1: {}
 
   yocto-queue@0.1.0: {}
+
+  zod@3.24.1: {}

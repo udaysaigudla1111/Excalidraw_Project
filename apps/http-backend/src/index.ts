@@ -1,15 +1,16 @@
 import express from 'express'
 import jwt, { JwtPayload } from 'jsonwebtoken'
 import { roomMiddleware } from './middleware';
-import {JWT_SECRET,NAME,demo} from '@repo/backend-common/config'
+import { CreateUserSchema,SigninSchema,CreateRoomSchema } from '@repo/common/types';
 const app = express();
 app.use(express.json())
 
-console.log(NAME);
-console.log(JWT_SECRET);
-console.log(demo);
+import dotenv from 'dotenv'
+
+dotenv.config({path:'../../.env'});
 
 
+console.log(process.env.JWT_SECRET);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -22,7 +23,7 @@ app.post("/signup",(req,res)=>{
 app.post("/signin",(req,res)=>{
 
     const userId=1
-    const token = jwt.sign({userId},JWT_SECRET)
+    const token = jwt.sign({userId},process.env.JWT_SECRET!)
 
     res.status(200).json({
         message:"User logged in successfully",
