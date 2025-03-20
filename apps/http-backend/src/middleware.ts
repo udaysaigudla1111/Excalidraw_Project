@@ -2,11 +2,11 @@ import { Request,Response,NextFunction } from "express";
 import jwt, { JwtPayload } from 'jsonwebtoken'
 
 
-interface CustomInterface extends Request{
-    userId:string
+export interface CustomInterface extends Request{
+    userId:number
 }
 
-const roomMiddleware = (req:Request,res:Response,next:NextFunction)=>{
+ const roomMiddleware = (req:Request,res:Response,next:NextFunction)=>{
 
     const token = req.headers.token as string;
     console.log(token);
